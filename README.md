@@ -1,0 +1,1 @@
+# sermon-translator-macOS
