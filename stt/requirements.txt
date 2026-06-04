@@ -1,0 +1,21 @@
+# STT live-transcription dependencies (Apple Silicon)
+# Python 3.10+ recommended
+
+# --- Core numerics ---
+numpy
+
+# --- Audio capture (microphone.py) ---
+sounddevice            # 16kHz mono mic stream; needs PortAudio (brew install portaudio)
+
+# --- Mel spectrogram (mel_spectrogram.py) ---
+librosa                # audio -> 80x3000 mel image
+
+# --- Voice activity detection (silero_vad.py) ---
+silero-vad             # pulls in torch/torchaudio as dependencies
+
+# --- CoreML encoder on Neural Engine (coreml_encoder.py) ---
+coremltools            # load .mlpackage, run on CPU_AND_NE
+
+# --- MLX decoder on Apple Silicon (mlx_decoder.py) ---
+mlx
+mlx-lm
